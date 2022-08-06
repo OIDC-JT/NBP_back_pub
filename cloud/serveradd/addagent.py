@@ -35,9 +35,9 @@ def batch(ID, OS, ServerID):
                     aws_secret_access_key=secret_key)
     bucket_name = 'oidc'
     object_name = '%s.bat'%ServerID                                       #파일 이름(파일명 : ID)
-    local_file_path = 'C:/Users/user/Desktop/NBP_back/cloud/%s.bat'%ServerID      #local 위치 
-    #local_file_path = '/root/%s.bat'%ID                             #서버상 위치
-
+    #local_file_path = 'C:/Users/user/Desktop/NBP_back/cloud/%s.bat'%ServerID      #local 위치 
+    local_file_path = '/root/cloud/serveradd/%s.bat'%ID                             #서버상 위치
+    
     s3.upload_file(local_file_path, bucket_name, object_name, ExtraArgs={'ACL':'public-read'})
     
     if os.path.exists(local_file_path):                              #local에 저장한 file 삭제

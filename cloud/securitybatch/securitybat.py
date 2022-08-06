@@ -122,10 +122,10 @@ def Security_batch(ID, OS, ServerID):
         bucket_name = 'oidc-security'
 
         #local_file_path = 'C:/Users/82102/Desktop/OIDC/'+object_name        #local 위치 
-        local_file_path = '/root/'+object_name                              #서버상 위치(배포용)
+        local_file_path = '/root/cloud/securitybatch/'+object_name                              #서버상 위치(배포용)
 
         #local_file_path1 = 'C:/Users/82102/Desktop/OIDC/'+object_name1                #local 위치 
-        local_file_path1 = '/root/'+object_name1                                      #서버상 위치(배포용)
+        local_file_path1 = '/root/cloud/securitybatch/'+object_name1                                      #서버상 위치(배포용)
 
         s3.upload_file(local_file_path, bucket_name, object_name, ExtraArgs={'ACL':'public-read'})
         s3.upload_file(local_file_path1, bucket_name, object_name1, ExtraArgs={'ACL':'public-read'})
