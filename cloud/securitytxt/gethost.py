@@ -3,7 +3,7 @@ import os
 def hostlists(id):
     ID = id
 
-    file_list = os.listdir('C:/Users/user/Desktop/test')
+    file_list = os.listdir('/root/')
     serverlist = []
     file_name =[]
     for file in file_list:

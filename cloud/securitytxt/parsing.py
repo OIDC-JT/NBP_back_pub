@@ -6,11 +6,11 @@ def Parsing(ID, ServerID):
     Txtfile_name = ID + '_' + ServerID
 
     #if os.path.exists('C:/Users/82102/Desktop/OIDC/parsing_test.txt'):             
-    if os.path.exists("C:/Users/user/Desktop/test/%s.txt"%(Txtfile_name)):                    #배포용
+    if os.path.exists("/root/%s.txt"%(Txtfile_name)):                    #배포용
         result = []
         
         #textfile = open("C:/Users/82102/Desktop/OIDC/parsing_test.txt", 'r')
-        textfile = open("C:/Users/user/Desktop/test/%s.txt"%(Txtfile_name), 'r')              #배포용
+        textfile = open("/root/%s.txt"%(Txtfile_name), 'r')              #배포용
         index = textfile.readlines()
         textfile.close()
 
