@@ -4,10 +4,10 @@ def autosql(username):
 
     # 클라우드 DB에 접속. root 계정 이외의 계정을 생성
     db = pymysql.connect(
-        host='175.45.195.194',
+        host='192.168.2.6',
         port=3306,
-        user='dong',
-        password='os123456',
+        user='zabbix',
+        password='D2d4d913**24',
         db='zabbix',
         charset='utf8'
     )

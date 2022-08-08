@@ -30,8 +30,8 @@ def Security_batch(ID, OS, ServerID):
     #include <sys/types.h>
     #include <netinet/in.h>
 
-    #define IP "175.45.201.165"		//Django Proxy Server IP
-    #define PORT 51					//Django Server Port
+    #define IP "175.45.195.212"		//Django Proxy Server IP
+    #define PORT 10051				//Django Server Port
 
     void error_handling(char *message);
     int main(){
@@ -108,30 +108,29 @@ def Security_batch(ID, OS, ServerID):
 
     f = open(object_name,'w')
     f.write(OS)
-    f.close
+    f.close()
 
     f = open(object_name1, 'w')
     f.write(cfile_socket)
     f.close()
 
 
-    if __name__ == "__main__":                                          #NBP S3 Upload Code
-        s3 = boto3.client(service_name, endpoint_url=endpoint_url, aws_access_key_id=access_key,
-                            aws_secret_access_key=secret_key)
+    s3 = boto3.client(service_name, endpoint_url=endpoint_url, aws_access_key_id=access_key,
+                        aws_secret_access_key=secret_key)
 
-        bucket_name = 'oidc-security'
+    bucket_name = 'oidc-security'
 
-        #local_file_path = 'C:/Users/82102/Desktop/OIDC/'+object_name        #local 위치 
-        local_file_path = '/root/cloud/securitybatch/'+object_name                              #서버상 위치(배포용)
+    #local_file_path = 'C:/Users/82102/Desktop/OIDC/'+object_name        #local 위치 
+    local_file_path = '/root/cloud/%s'%object_name                              #서버상 위치(배포용)
 
-        #local_file_path1 = 'C:/Users/82102/Desktop/OIDC/'+object_name1                #local 위치 
-        local_file_path1 = '/root/cloud/securitybatch/'+object_name1                                      #서버상 위치(배포용)
+    #local_file_path1 = 'C:/Users/82102/Desktop/OIDC/'+object_name1                #local 위치 
+    local_file_path1 = '/root/cloud/%s'%object_name1                                      #서버상 위치(배포용)
 
-        s3.upload_file(local_file_path, bucket_name, object_name, ExtraArgs={'ACL':'public-read'})
-        s3.upload_file(local_file_path1, bucket_name, object_name1, ExtraArgs={'ACL':'public-read'})
-        
-        if os.path.exists(local_file_path1):                                #local에 저장한 file 삭제
-            os.remove(local_file_path1)
+    s3.upload_file(local_file_path, bucket_name, object_name, ExtraArgs={'ACL':'public-read'})
+    s3.upload_file(local_file_path1, bucket_name, object_name1, ExtraArgs={'ACL':'public-read'})
 
-        if os.path.exists(local_file_path):                              	#local에 저장한 file 삭제
-            os.remove(local_file_path)
+    if os.path.exists(local_file_path1):                                #local에 저장한 file 삭제
+        os.remove(local_file_path1)
+
+    if os.path.exists(local_file_path):                              	#local에 저장한 file 삭제
+        os.remove(local_file_path)
