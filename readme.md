@@ -3,7 +3,7 @@
 ## 프로젝트 실행 방법(순서대로 진행하기)
 
 ### 1. 레퍼지토리 클론
-    git clone https://github.com/OIDC-JT/NBP_back.git
+    git clone https://github.com/OIDC-JT/NBP_back_pub.git
 
 ### 2. 가상환경 실행
     source myvenv/Scripts/activate
@@ -49,38 +49,38 @@
 ### 유저 회원가입 및 로그인/로그아웃
 
 ### 회원가입 및 자빅스 db 자동 생성
-### 127.0.0.1:8000/accounts - POST 메소드 사용
+### 127.0.0.1:8080/accounts - POST 메소드 사용
     username, email, password1(비밀번호), password2(비밀번호 확인) 입력
 
 ### 로그인
-### 127.0.0.1:8000/accounts/login - POST 메소드 사용
+### 127.0.0.1:8080/accounts/login - POST 메소드 사용
     username, password 입력
 
 ### 로그아웃
-### 127.0.0.1:8000/accounts/logout - POST 메소드 사용
+### 127.0.0.1:8080/accounts/logout - POST 메소드 사용
     입력값 없이 POST방식으로 보내기
 
 
 ### 크롤링 후 계산 결과 도출
-### 127.0.0.1:8000/ - POST 메소드 사용
+### 127.0.0.1:8080/ - POST 메소드 사용
     입력값은 숫자로 이루어진 배열
 
 ### 서버 추가
-### 127.0.0.1:8000/serveradd/ - POST 메소드 사용
+### 127.0.0.1:8080/serveradd/ - POST 메소드 사용
     servertype, servername에 해당하는 문자열 값 입력
 
 ### 서버 추가_planB
-### 127.0.0.1:8000/serveradd/sub/ - POST 메소드 사용
+### 127.0.0.1:8080/serveradd/sub/ - POST 메소드 사용
     username,servertype, servername에 해당하는 문자열 값 입력
 
 ### 보안 배치 파일
-### 127.0.0.1:8000/securitybatch/ - POST 메소드 사용
+### 127.0.0.1:8080/securitybatch/ - POST 메소드 사용
     servertype, servername에 해당하는 문자열 값 입력
 
 ### 보안 배치 파일_planB
-### 127.0.0.1:8000/securitybatch/sub/ - POST 메소드 사용
+### 127.0.0.1:8080/securitybatch/sub/ - POST 메소드 사용
     username, servertype, servername에 해당하는 문자열 값 입력
 
 ### 사용자의 호스트 목록 조회
-### 127.0.0.1:8000/hostlist/ - GET 메소드 사용
+### 127.0.0.1:8080/hostlist/ - GET 메소드 사용
     입력값 없이 빈칸으로 입력
