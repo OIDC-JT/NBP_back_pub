@@ -32,7 +32,7 @@
 
 ## API
 
-### NBP 함수 사용 ) 127.0.0.1:8080 으로 접속
+### NBP 함수 사용 ) 175.45.201.194:8080 으로 접속
 
 ### 입력값 - POST 메소드 사용
     ex.
@@ -49,38 +49,38 @@
 ### 유저 회원가입 및 로그인/로그아웃
 
 ### 회원가입 및 자빅스 db 자동 생성
-### 127.0.0.1:8080/accounts - POST 메소드 사용
+### 175.45.201.194:8080/accounts - POST 메소드 사용
     username, email, password1(비밀번호), password2(비밀번호 확인) 입력
 
 ### 로그인
-### 127.0.0.1:8080/accounts/login - POST 메소드 사용
+### 175.45.201.194:8080/accounts/login - POST 메소드 사용
     username, password 입력
 
 ### 로그아웃
-### 127.0.0.1:8080/accounts/logout - POST 메소드 사용
+### 175.45.201.194:8080/accounts/logout - POST 메소드 사용
     입력값 없이 POST방식으로 보내기
 
 
 ### 크롤링 후 계산 결과 도출
-### 127.0.0.1:8080/ - POST 메소드 사용
+### 175.45.201.194:8080/ - POST 메소드 사용
     입력값은 숫자로 이루어진 배열
 
 ### 서버 추가
-### 127.0.0.1:8080/serveradd/ - POST 메소드 사용
+### 175.45.201.194:8080/serveradd/ - POST 메소드 사용
     servertype, servername에 해당하는 문자열 값 입력
 
 ### 서버 추가_planB
-### 127.0.0.1:8080/serveradd/sub/ - POST 메소드 사용
+### 175.45.201.194:8080/serveradd/sub/ - POST 메소드 사용
     username,servertype, servername에 해당하는 문자열 값 입력
 
 ### 보안 배치 파일
-### 127.0.0.1:8080/securitybatch/ - POST 메소드 사용
+### 175.45.201.194:8080/securitybatch/ - POST 메소드 사용
     servertype, servername에 해당하는 문자열 값 입력
 
 ### 보안 배치 파일_planB
-### 127.0.0.1:8080/securitybatch/sub/ - POST 메소드 사용
+### 175.45.201.194:8080/securitybatch/sub/ - POST 메소드 사용
     username, servertype, servername에 해당하는 문자열 값 입력
 
 ### 사용자의 호스트 목록 조회
-### 127.0.0.1:8080/hostlist/ - GET 메소드 사용
+### 175.45.201.194:8080/hostlist/ - GET 메소드 사용
     입력값 없이 빈칸으로 입력
