@@ -1,4 +1,4 @@
-# 크롤링 및 NBP 함수 사용하여 결과값 도출하는 REST API
+# Django REST API Framework
 
 ## 프로젝트 실행 방법(순서대로 진행하기)
 
